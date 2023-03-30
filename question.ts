@@ -30,7 +30,13 @@ export const findLargestNumberInArray = (array: number[]): number => {
 
 /*Write a function that takes in an array of numbers and returns the sum of all of the odd numbers in the array.*/
 export const sumOfOddNumbersInArray = (array: number[]): number => {
-    return 0;
+    var result = 0;
+    for (let i=0; i<array.length;i++){
+        if(array[i]%2==1){
+            result+=array[i];
+        }
+    }
+    return result;
 }
 
 /*Given an array of strings, return the longest one in the array.*/
@@ -45,7 +51,11 @@ export const countVowelsInString = (string: string): number => {
 
 /* Write a function that reverse the input string. For example: “Animal” to “laminA”. */
 export const reverseString = (string: string): string => {
-    return '';
+    var new_string="";
+    for (let i=string.length-1;i>=0;i--){
+        new_string += string[i];
+    }
+    return new_string;
 }
 
 /* Given two integers, write a function that takes returns the smallest common divisor of these two numbers.*/
